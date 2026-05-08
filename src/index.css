@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+
+/* ─── Primitive Tokens ─────────────────────────────────────────── */
+:root {
+  --indigo-bg: #f4f3f8;
+  --indigo-bg-soft: #ecebf3;
+
+  --indigo-ink: #1d1c2e;
+  --indigo-ink-soft: #45445d;
+
+  --indigo-muted: #8987a3;
+  --indigo-line: #cfcde0;
+
+  --indigo-primary: #5a4ec8;
+  --indigo-primary-hover: #4a3eb8;
+  --indigo-primary-soft: #a59cee;
+
+  /* ─── Semantic Tokens ────────────────────────────────────────── */
+
+  /* Backgrounds */
+  --color-bg-primary: var(--indigo-bg);
+  --color-bg-secondary: var(--indigo-bg-soft);
+  --color-bg-tertiary: #ffffff;
+
+  /* Text */
+  --color-text-primary: var(--indigo-ink);
+  --color-text-secondary: var(--indigo-ink-soft);
+  --color-text-muted: var(--indigo-muted);
+
+  /* Borders */
+  --color-border-default: var(--indigo-line);
+
+  /* Actions */
+  --color-primary: var(--indigo-primary);
+  --color-primary-hover: var(--indigo-primary-hover);
+  --color-primary-soft: var(--indigo-primary-soft);
+
+  /* States */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* ─── Typography Scale ──────────────────────────────────────── */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+  --font-2xl: 32px;
+  --font-3xl: 40px;
+  --font-4xl: 56px;
+
+  /* ─── Spacing Scale ─────────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* ─── Radius Scale ──────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* ─── Shadow Scale ──────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(30, 30, 60, 0.08);
+  --shadow-lg: 0 12px 32px rgba(30, 30, 60, 0.12);
+
+  /* ─── Motion Scale ──────────────────────────────────────────── */
+  --motion-fast: 120ms;
+  --motion-normal: 180ms;
+  --motion-slow: 280ms;
+}
+
+/* ─── Tailwind Theme (CSS vars exposed as utilities) ───────────── */
+@theme inline {
+  /* Fonts */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+
+  /* Font sizes */
+  --font-size-xs: var(--font-xs);
+  --font-size-sm: var(--font-sm);
+  --font-size-md: var(--font-md);
+  --font-size-lg: var(--font-lg);
+  --font-size-xl: var(--font-xl);
+  --font-size-2xl: var(--font-2xl);
+  --font-size-3xl: var(--font-3xl);
+  --font-size-4xl: var(--font-4xl);
+
+  /* Colors — semantic */
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-bg-tertiary: var(--color-bg-tertiary);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-border-default: var(--color-border-default);
+
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-soft: var(--color-primary-soft);
+
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-danger: var(--color-danger);
+
+  /* Spacing */
+  --spacing-1: var(--space-1);
+  --spacing-2: var(--space-2);
+  --spacing-3: var(--space-3);
+  --spacing-4: var(--space-4);
+  --spacing-5: var(--space-5);
+  --spacing-6: var(--space-6);
+  --spacing-7: var(--space-7);
+  --spacing-8: var(--space-8);
+
+  /* Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  /* Shadows */
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+
+  /* Transition durations */
+  --duration-fast: var(--motion-fast);
+  --duration-normal: var(--motion-normal);
+  --duration-slow: var(--motion-slow);
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-md);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
