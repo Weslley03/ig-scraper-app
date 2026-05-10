@@ -77,6 +77,10 @@
   --motion-slow: 280ms;
 }
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 /* ─── Tailwind Theme (CSS vars exposed as utilities) ───────────── */
 @theme inline {
   /* Fonts */
@@ -140,6 +144,12 @@
   --duration-slow: var(--motion-slow);
 
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Animations ────────────────────────────────────────────────── */
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
 }
 
 /* ─── Base ──────────────────────────────────────────────────────── */
