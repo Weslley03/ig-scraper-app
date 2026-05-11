@@ -33,12 +33,16 @@ export default function Analyze() {
   const [copyText, setCopyText] = useState('copiar')
   const [actionsHoveredId, setActionsHoveredId] = useState<number | null>(null)
 
-  useEffect(() => {
-    if (isPreview) return
+  function fetchHistory() {
     listMyHistory()
       .then(setHistory)
       .catch(() => {})
       .finally(() => setHistoryLoading(false))
+  }
+
+  useEffect(() => {
+    if (isPreview) return
+    fetchHistory()
   }, [isPreview])
 
   async function clickOnAction(action: string) {
@@ -144,6 +148,7 @@ export default function Analyze() {
       // final
       setResult(text)
       setStep('done')
+      fetchHistory()
     } catch (err) {
       setStep('idle')
       setError(err instanceof Error ? err.message : 'Erro desconhecido.')
