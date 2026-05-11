@@ -6,11 +6,11 @@ Ferramenta web que extrai os comentários de uma publicação pública do Instag
 
 ### Home
 
-> imagem-home
+<img width="1240" height="717" alt="Captura de tela de 2026-05-11 17-38-07" src="https://github.com/user-attachments/assets/85239277-ffe2-4c96-8e48-596cfc1580ac" />
 
 ### Análise concluída
 
-> a imagem-análise
+<img width="1152" height="541" alt="Captura de tela de 2026-05-11 18-31-01" src="https://github.com/user-attachments/assets/cb3084f8-64d6-4f1c-a180-2ab0e0fe2ce4" />
 
 ---
 
